@@ -9,7 +9,10 @@ import {
 export class AppController {
   constructor() {}
   @MessagePattern('rabbit-mq-producer')
-  public async execute(@Payload() data: any, @Ctx() context: RmqContext) {
+  public async receiveRabbitMQMessage(
+    @Payload() data: any,
+    @Ctx() context: RmqContext,
+  ) {
     console.log('data', data);
     const channel = context.getChannelRef();
     console.log('channel', channel);
