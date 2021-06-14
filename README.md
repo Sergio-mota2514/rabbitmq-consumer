@@ -30,6 +30,7 @@ A simple RabbitMQ consumer example based on [Nest](https://github.com/nestjs/nes
 
 ```bash
 $ npm install
+$ Create your .env file with the settings: RABBITMQ_ADDRESS and RABBITMQ_QUEUE 
 ```
 
 ## Running the app
